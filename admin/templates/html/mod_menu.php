@@ -1,91 +1,86 @@
-<div id="slidemenu" class="ddsmoothmenu">
-    <ul>
-        <li>
-            <a href="<?=site_url('')?>">Hệ thống</a>
-            <ul>
-                <li><a href="<?=site_url('setting/site')?>">Cấu hình website</a></li>
-                <li><a href="<?=site_url('setting/seo')?>">SEO Code</a></li> 
-                
-                <li><a href="<?=site_url('filemanager')?>">Quản lý File</a>
-                    <ul>
-                        <li><a href="<?=site_url('filemanager/images')?>">Quản lý Hình ảnh</a>
-                        <li><a href="<?=site_url('filemanager/filedata')?>">Quản lý Files</a>
-                        <li><a href="<?=site_url('filemanager/media')?>">Quản lý Media</a>
-                    </ul>
-                </li>
-                <li><a href="<?=site_url('account/ds')?>">Danh sách thành viên</a></li>  
-            </ul>
-        </li> 
-        <li>
-            <a href="<?=site_url('news/ds')?>">Nội dung - Bài viết</a>
-            <ul>
-                <li><a href="<?=site_url('category')?>">Danh mục</a></li>
-                <li><a href="<?=site_url('news/ds')?>">Tin tức</a></li>  
-            </ul>
-        </li>
-		<!-- <li>
-            <a href="<?=site_url('hotel/ds')?>">Khách sạn</a>
-            <ul>
-                <li><a href="<?=site_url('hotel_chanel')?>">Danh mục</a></li>
-                <li><a href="<?=site_url('hotel/ds')?>">Danh sách khách sạn</a></li>  
-            </ul>
-        </li> 
-        <li>
-            <a href="<?=site_url('thuexe/ds')?>">Thuê xe</a>
-           
-        </li>
-        <li>
-            <a href="javascript:;">Danh mục</a>
-            <ul>
-                <li><a href="<?=site_url('tuychon/tinhthanh/ds')?>">Tỉnh, Thành phố</a></li>
-                
-                <li><a href="<?=site_url('about/edit/1')?>" class=""><span>Giới thiệu</span></a></li> 
-                <li><a href="<?=site_url('about/edit/2')?>" class=""><span>Quy định đặt Tour</span></a></li>
-                <li><a href="<?=site_url('bank/ds')?>">Tài khoản ngân hàng</a></li>  
-            </ul>
-        </li>        
-        <li>
-            <a href="<?=site_url('tour/ds')?>" class="">Tour du lịch</a>
-            <ul>
-                <li><a href="<?=site_url('tour/category')?>">Danh mục Tour</a></li>
-                <li><a href="<?=site_url('tour/ds')?>" class="">Danh sách Tour</a></li>
-                <li><a href="<?=site_url('chude/ds')?>" class=""><span>Chủ đề tour</span></a></li>
-                <li><a href="<?=site_url('booking/ds')?>"><span>Booking - Đặt tour</span></a></li> 
-                <li><a href="<?=site_url('city/ds')?>">Điểm đến</a></li>            
-                <li><a href="<?=site_url('tourcomment/ds')?>">Đánh giá Tour</a></li>
-<li><a href="<?=site_url('pricesearch/ds')?>" class=""><span>Nhập giá tìm kiếm</span></a></li> 
-            </ul>
-        </li>        
-        <li>
-            <a href="<?=site_url('diadanh/local/ds/?ct=VN')?>" class="">Địa danh</a>
-            <ul>
-                <li><a href="<?=site_url('diadanh/cat/ds')?>">Danh mục Địa danh</a></li>
-            </ul>            
-        </li> 
-        <li>
-            <a href="<?=site_url('amthuc/local/ds/?ct=VN')?>" class="">Ẩm thực</a>
-            <ul>
-                <li><a href="<?=site_url('amthuc/cat/ds')?>">Danh mục Ẩm thực</a></li>
-            </ul>            
-        </li> 
-         --> 
-        
-        <li><a href="#" class="">Phần mở rộng</a>
-            <ul>
-                 <li><a href="<?=site_url('mod/ds')?>">Modules</a></li>
-                 <li><a href="<?=site_url('slideshow/ds')?>">Slide</a></li>
-                 <li><a href="<?=site_url('weblink/ds')?>"><span>Weblink</span></a></li>
-                 <li><a href="<?=site_url('hotro/ds')?>"><span>Hỗ trợ trực tuyến</span></a></li>
-                 <li><a href="<?=site_url('khachhang/ds')?>" class=""><span>Khách hàng</span></a></li>
-				 
-            </ul>
-        </li>
-        <li><a href="<?=site_url('contact')?>">Liên hệ</a>
-            <ul>
-                <li><a href="<?=site_url('contact')?>">Cấu hình liên hệ</a></li>
-                <li><a href="<?=site_url('contact/listcontact')?>">Danh sách liên hệ</a></li>
-            </ul>
-        </li>
-    </ul>
-    <div class="clear"></div>
-</div>
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="<?= base_url() ?>templates/dest/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+            </div>
+            <div class="pull-left info">
+                <p>Alexander Pierce</p>
+
+                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search..."/>
+                <span class="input-group-btn">
+                    <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header">MENU</li>
+            <li class="treeview">
+                <a href="<?=site_url('')?>">
+                    <i class="fa fa-cogs"></i> <span>Hệ thống</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?=site_url('setting/site')?>"><i class="fa fa-google-wallet"></i> Cấu hình website</a></li>
+                    <li><a href="<?=site_url('setting/seo')?>"><i class="fa fa-sellsy"></i>  SEO Code</a></li>
+                    <li>
+                        <a href="<?=site_url('filemanager')?>"><i class="fa fa-folder"></i> Quản lý file <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="<?=site_url('filemanager/images')?>"><i class="fa fa-file-picture-o"></i> Quản lý Hình ảnh</a></li>
+                            <li><a href="<?=site_url('filemanager/filedata')?>"><i class="fa fa-file-archive-o"></i> Quản lý Files</a></li>
+                            <li><a href="<?=site_url('filemanager/media')?>"><i class="fa fa-file-video-o"></i> Quản lý Media</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="<?=site_url('account/ds')?>"><i class="fa fa-list-ol"></i>  Danh sách thành viên</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="<?=site_url('news/ds')?>">
+                    <i class="fa fa-book"></i>
+                    <span>Nội dung - Bài viết</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?=site_url('category')?>"><i class="fa fa-list-alt"></i> Danh mục</a></li>
+                    <li><a href="<?=site_url('news/ds')?>"><i class="fa fa-newspaper-o"></i> Tin tức</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="<?=site_url('mod/ds')?>">
+                    <i class="fa fa-plus-square"></i>
+                    <span>Phần mở rộng</span>
+                    <span class="fa fa-angle-left pull-right"></span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?=site_url('mod/ds')?>"><i class="fa fa-windows"></i> Modules</a></li>
+                    <li><a href="<?=site_url('slideshow/ds')?>"><i class="fa fa-sliders"></i> Slide</a></li>
+                    <li><a href="<?=site_url('weblink/ds')?>"><i class="fa fa-wordpress"></i> Weblink</a></li>
+                    <li><a href="<?=site_url('hotro/ds')?>"><i class="fa  fa-weibo"></i> Hỗ trợ trực tuyến</a></li>
+                    <li><a href="<?=site_url('khachhang/ds')?>"><i class="fa fa-users"></i> Khách hàng</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="<?=site_url('contact')?>">
+                    <i class="fa fa-wechat"></i>
+                    <span>Liên hệ</span>
+                    <span class="fa fa-angle-left pull-right"></span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?=site_url('contact')?>"><i class="fa fa-cog"></i> Cấu hình liên hệ</a></li>
+                    <li><a href="<?=site_url('contact/listcontact')?>"><i class="fa fa-list-ul"></i> Danh sách liên hệ</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
