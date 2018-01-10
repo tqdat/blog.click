@@ -1,0 +1,117 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+a {
+    color: #4E4C43;
+    cursor: pointer;
+    text-decoration: none;
+}
+body{
+    background: #6599d1;
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0px;
+    color: #666;
+}
+
+#bound-login {
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+#login-form {
+    height: 335px;
+    left: 50%;
+    margin-left: -236px;
+    position: absolute;
+    top: -170px;
+    width: 472px;
+}
+#login-top {
+    background: url("../images/l-head.png") no-repeat scroll 0 0 transparent;
+    height: 89px;
+    width: 418px;
+    position: relative;
+}
+#login-top .logo{
+    position: absolute;
+    top: 12px;
+    left: 20px;
+}
+#login-imos{
+    background: url(../images/l-bot.png) no-repeat center bottom;
+    width: 418px;
+    position: relative;
+}
+#login-imos .footer{
+    bottom: 14px;
+    color: #FFFFFF;
+    position: absolute;
+    right: 20px;
+}
+.msg{
+    color: #f5821f;
+    margin-bottom: 10px;
+}
+.login-content{
+    padding: 10px 20px 38px 20px;
+}
+.item{
+    overflow: hidden;
+    margin-bottom: 10px;
+    
+}
+.item label{
+    float: left;
+    width: 100px;
+}
+.item_bt{
+    padding-left: 100px;
+    margin-bottom: 10px;
+}
+input[type="password"],
+input[type="text"]{
+    padding: 4px 5px;
+    border: 1px solid #CCC;
+    width: 266px;
+}
+input[type="password"]:focus,
+input[type="text"]:focus{
+    border: 1px solid #79d74e; 
+}
+.bt_login{
+    background: url(../images/bt_login.png) repeat-x bottom;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid #57AB05;
+    color: #FFF;
+    padding: 4px 10px;
+    border-radius: 2px 2px 2px 2px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.lostpass{
+    font-size: 11px;
+    color: #f58220;
+}
+.bt_login:hover{
+    background: url(../images/bt_login_hover.png) repeat-x bottom;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid #478b03;
+    color: #FFF;
+    padding: 4px 10px;
+    border-radius: 2px 2px 2px 2px;
+    
+}

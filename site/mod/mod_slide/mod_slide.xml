@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5">
+    <name>Modules Slide banner</name>
+    <author>Phan Phước Long</author>
+    <creationDate>01/03/2015</creationDate>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>phanphuoclong81@gmail.com</authorEmail>
+    <version>1.0</version>
+
+    <params>
+        <param name="hmax" type="text" default="500" label="Chiều cao" description="" /> 
+        <param name="wmax" type="text" default="1440" label="Chiều rộng" description="" /> 
+    </params>
+</install>

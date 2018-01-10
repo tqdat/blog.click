@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5">
+    <name>Modules ý kiến khách hàng</name>
+    <author>Lê Văn Tịnh</author>
+    <creationDate>20/01/2017</creationDate>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>levantinh.art94@gmail.com</authorEmail>
+    <version>1.0</version>
+
+    <params>
+        
+    </params>
+</install>

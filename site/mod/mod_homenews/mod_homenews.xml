@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5">
+    <name>Module News</name>
+    <author>Phan Phước Long</author>
+    <creationDate>03/10/2017</creationDate>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>long.phan@phangiahuy.com</authorEmail>
+    <version>1.0</version>
+    <params>
+        <param name="catid" type="text" default="0" label="Danh mục Tin tức" description="ID Danh mục Tin tức" /> 
+        <param name="type" type="list" default="1" label="Kiểu hiển thị" description="Kiểu hiển thị"> 
+        	<option value="1">Hình lớn - Tin nhỏ</option>
+            <option value="2">Tin nhỏ - Hình lớn</option>
+            <option value="3">3 Tin bài đều nhau</option>
+            <option value="4">4 Tin bài đều nhau</option>
+        </param>
+        <param name="max" type="text" default="6" label="Số lượng" description="Số lượng bài viết" /> 
+    </params>
+</install>

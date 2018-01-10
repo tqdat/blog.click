@@ -1,0 +1,8 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.danatravel.vn [NC]
+RewriteRule ^(.)$ http://danatravel.vn/$1 [L,R=301]
+RewriteCond $1 !^(index\.php|site|tutorial|trueclick|admin|captcha|img|favicon\.ico)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.)$ index.php/$1 [L,QSA]

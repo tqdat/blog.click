@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5">
+    <name>Module chèn HTML</name>
+    <author>Tran Ngoc Duoc</author>
+    <creationDate>01/06/2011</creationDate>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>tranngocduoc@gmail.com</authorEmail>
+    <version>1.0</version>
+
+    <params>
+  
+    </params>
+</install>

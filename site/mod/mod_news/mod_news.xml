@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5">
+    <name>Modules Tin mới</name>
+    <author>Phan Phước Long</author>
+    <creationDate>01/03/2015</creationDate>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>long.phan@phangiahuy.com</authorEmail>
+    <version>1.0</version>
+
+    <params>
+    	<param name="max" type="text" default="10" label="Số lượng" description="Số lượng bài viết" /> 
+    	<param name="count" type="text" default="5" label="Số lượng hiển thị" description="Số lượng bài viết hiển thị" /> 
+    </params>
+</install>

@@ -1,0 +1,96 @@
+/*Ipad ngang (1024 x 768)*/
+@media screen and (max-width: 1024px){
+	#body{
+		width: 100%;
+		float: none;
+	}
+	#header{
+		width: 100%;
+	}
+	#header #title-admin{
+		width: 60%;
+		float: left;
+		text-align: center;
+		font-size: 23px;
+	}
+	#header #iconheader{
+		width: 30%;
+		float: right;
+		padding: 12px 0px;
+	}
+}
+
+/*Ipad dọc (768 x 1024)*/
+@media screen and (max-width: 768px){
+	#header #title-admin{
+		font-size: 18px;
+	}
+}
+
+/*Moblie (480 x 640)*/
+@media screen and (max-width: 480px){
+	#loading{
+		margin: 0px;
+		padding: 0px;
+	}
+	#header{
+		height: 80px;
+	}
+	#header #title-admin{
+		display: block;
+		text-align: center;
+		font-size: 18px;
+		width: 100%;
+		/*margin: 10px 0px 0px 0px ;*/
+	}
+	#header #iconheader{
+		float: right;
+		display: block;
+		width: 40%;
+		padding: 12px 0px 0px 0px;
+	}
+	#content{
+		width: 100%;
+	}
+	#menutop{
+		width: 100%;
+		padding: 0;
+
+	}
+	#menutop #slidemenu{
+		display: block;
+		flex: center;
+	}
+
+	#colright #wrapper{
+		padding: 0px;
+	}
+	#wrapper{
+		width: 100%;
+		padding: 0px;
+	}
+	#wrapper .tuychon #cat_id{
+		width: 100%;
+		float: none;
+
+	}
+	table.tuychon tr td{
+		width: 100%;
+		display: block;
+		float: left;
+	}
+	table.tuychon tr td select#cat_id{
+		float: left;
+	}
+	table.form{
+		width: 100%;
+		display: block;
+	}
+	table.form td input{
+		width: 100%;
+	}
+}
+/*Moblie(320 x 480)*/
+@media screen and (max-width: 320px){
+
+}

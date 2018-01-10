@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="templates" version="1.5">
+    <name>Position Templates</name>
+    <author>Phan Phuoc Long</author>
+    <creationDate>01/06/2011</creationDate>
+    <copyright>www.pgh.vn</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>tranngocduoc#gmail.com</authorEmail>
+    <authorUrl>http://www.pgh.vn</authorUrl>
+    <version>1.0</version>
+
+    <position>
+        
+        <position name="footer" label="Footer" />
+        <position name="footer2" label="Footer2" />
+        <position name="footer3" label="Footer3" />
+        <position name="slide" label="Slide" /> 
+        <position name="ykien" label="Tin hiển thị ở giữa trang chủ" /> 
+        <position name="left" label="Bên phải" />
+        <position name="banner" label="Banner" />
+        <position name="adv" label="Banner ADV" />
+        <position name="search" label="Search" />
+        <position name="tags" label="Tags" />
+        <position name="header" label="Header" />
+        <position name="hinhanh_home" label="Ảnh khách hàng Home" />
+        <position name="anhdep" label="Ảnh khách hàng" />
+        <position name="home_popup" label="Home Popup" />
+        <position name="chuyenkhoan" label="Chuyển khoản" />
+        <position name="vanphong" label="Thanh toán tại văn phòng" />
+        <position name="chinhanh" label="Thông tin VP phía Bắc" />
+        <position name="home_top" label="Home Top Leftt" />
+        <position name="right_top" label="Home Top Right" />
+        <position name="home_center" label="Home Center" />
+        <position name="home_bottom" label="Home Bottom" />
+    </position>
+    
+     <css>
+        <css name="" label="Mặc định" />
+        <css name="fa fa-microphone" label="Hỗ trợ Icon" />
+        <css name="fa fa-image" label="Ảnh đẹp Icon" />
+        <css name="fa fa-bar-chart" label="Thống kê Icon" />
+        <css name="fa fa-file-text" label="Tin tức Icon" />
+        <css name="fa fa-fire" label="Tour Icon" />
+    </css>
+
+</install>

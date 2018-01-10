@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5">
+    <name>Modules Slide Tin Tức</name>
+    <author>Phan Phước Long</author>
+    <creationDate>02/10/2017</creationDate>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>long.phan@phangiahuy.com</authorEmail>
+    <version>1.0</version>
+
+<!-- 
+    <params>
+        <param name="" type="text" default="500" label="Chiều cao" description="" /> 
+    </params> -->
+</install>
