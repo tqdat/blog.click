@@ -1,47 +1,54 @@
 <?php echo form_open(uri_string(), array('id'=>'admindata'));?>
-<table class="form">   
-    <tr>
-        <td class="label" style="width: 150px;">Nhóm thành viên</td>
-        <td>
-            <select name="group_id" style="width: 305px;">
-            <?php foreach($listgroup as $g):?>
-                <option value="<?php echo $g->group_id?>"><?php echo $g->group_name?></option>
-            <?php endforeach;?>
-            </select>
-        </td>
-    </tr>
-    <tr>
-        <td class="label">Tên thành viên</td>
-        <td><input type="text" class="w300" name="fullname" value="<?php echo set_value('fullname')?>"></td>
-    </tr>
-    <tr>
-        <td class="label">Email</td>
-        <td><input type="text" class="w300" name="email" value="<?php echo set_value('email')?>"></td>
-    </tr>  
-    <tr>
-        <td class="label">Tên đăng nhập</td>
-        <td><input type="text" class="w300" name="username" value="<?php echo set_value('username')?>"></td>
-    </tr>  
-    <tr>
-        <td class="label">Mật khẩu</td>
-        <td><input type="password" class="w300" name="password" value=""></td>
-    </tr>  
-    <tr>
-        <td class="label">Mật khẩu nhắc lại</td>
-        <td><input type="password" class="w300" name="re_password" value=""></td>
-    </tr> 
-    <tr>
-        <td class="label">Địa chỉ</td>
-        <td><input type="text" class="w300" name="address" value="<?=set_value('address')?>"></td>
-    </tr> 
-    <tr>
-        <td class="label">Điện thoại</td>
-        <td><input type="text" class="w300" name="phone" value="<?=set_value('phone')?>"></td>
-    </tr>
-    <tr>
-        <td class="label">Kích hoạt</td>
-        <td><input type="radio" name="published" value="0" <?php echo (set_value('published') == 0)?'checked="checked"':'';?>> Không 
-        <input type="radio" name="published" value="1" <?php echo (set_value('published') == 1)?'checked="checked"':'checked="checked"';?>>Có</td>
-    </tr>
-</table>
+<div class="row">
+    <div class="col-md-6">
+        <!-- general form elements disabled -->
+        <div class="box box-warning">
+            <div class="box-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label>Nhóm thành viên</label>
+                        <select class="form-control" name="group_id">
+                            <?php foreach($listgroup as $g):?>
+                                <option value="<?php echo $g->group_id?>"><?php echo $g->group_name?></option>
+                            <?php endforeach;?>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label> Tên thành viên </label>
+                        <input type="text" name="fullname" class="form-control" value="<?php echo set_value('fullname')?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" name="email" class="form-control" value="<?php echo set_value('email')?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Tên đăng nhập</label>
+                        <input type="text" name="username" class="form-control" value="<?php echo set_value('username')?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Mật khẩu</label>
+                        <input type="password" name="password" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label>Mật khẩu nhắc lại</label>
+                        <input type="password" name="re_password" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label>Địa chỉ</label>
+                        <input type="text" name="address" class="form-control" value="<?php echo set_value('address')?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Điện thoại</label>
+                        <input type="text" name="phone" class="form-control" value="<?php echo set_value('phone')?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Kích hoạt</label>
+                        <input type="radio" name="published" value="0" <?php echo (set_value('published') == 0)?'checked="checked"':'';?>><span>Không</span> 
+                        <input type="radio" name="published" value="1" <?php echo (set_value('published') == 1)?'checked="checked"':'checked="checked"';?>><span>Có</span> 
+                    </div>
+                </form>
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
+    </div>
+</div>
 <?php echo form_close();?>
