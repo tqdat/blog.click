@@ -1,5 +1,5 @@
 <?=form_open(uri_string(),array('id'=>'admindata'))?>
-<div class="col-md-6">
+<div class="col-md-12">
     <div class="box box-warning">
         <div class="box-body">
             <form role="form">
