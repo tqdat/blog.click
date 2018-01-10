@@ -1,7 +1,7 @@
 <?php echo form_open(uri_string(), array('id'=>'admindata'));?>
 <input type="hidden" name="cat_id" value="0">
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-12">
     <div class="box box-warning">
       <div class="box-body">
         <form role="form">

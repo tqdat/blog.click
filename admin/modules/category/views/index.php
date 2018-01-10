@@ -1,7 +1,7 @@
 <?php echo form_open('category/dels',  array('id' => 'admindata'));?> 
 <input type="hidden" name="page" value="<?php echo set_post_page()?>">
 <div class="row">
-  <div class="col-xs-6">
+  <div class="col-xs-12">
     <div class="box">
       <!-- /.box-header -->
       <div class="box-body">
@@ -10,7 +10,7 @@
             <th class="id">ID</th>
             <th class="checked" style="text-align: center"><input type="checkbox" name="sa" id="sa" onclick="check_chose('sa', 'ar_id[]', 'admindata')"></th>
             <th>Danh mục</th>
-            <th>Sắp xếp <?php echo action_order()?></th>
+            <th style="width: 10%">Sắp xếp <?php echo action_order()?></th>
             <th>Chức năng</th>
           </tr>        
         </thead>

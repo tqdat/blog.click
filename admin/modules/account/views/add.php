@@ -1,6 +1,6 @@
 <?php echo form_open(uri_string(), array('id'=>'admindata'));?>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
         <!-- general form elements disabled -->
         <div class="box box-warning">
             <div class="box-body">

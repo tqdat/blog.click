@@ -1,7 +1,7 @@
 <?php echo form_open(uri_string(), array('id'=>'admindata'));?>
 <input type="hidden" name="user_id" value="<?php echo $rs->user_id?>">
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
         <!-- general form elements disabled -->
         <div class="box box-warning">
             <div class="box-body">
