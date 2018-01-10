@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
 * File route_news 
-* Date: 10/01/18 04:03:27.
+* Date: 10/01/18 10:32:39.
 **/
 $route['tin-tuc'] = 'news/index';
 $route['tin-tuc/(:num)'] = 'news/index/$1';

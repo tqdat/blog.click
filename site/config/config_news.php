@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
-* Date: 10/01/18 04:03:07.
+* Date: 10/01/18 10:32:22.
 **/
 $config['total_cat'] = 7;
 
