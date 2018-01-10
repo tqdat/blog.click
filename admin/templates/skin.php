@@ -71,14 +71,8 @@ if($_SESSION['user_id'] == '' || $_SESSION['group_id'] < 11){
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
-                <h1>
-                    Dashboard
-                    <small>Control panel</small>
-                </h1>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                    <li class="active">Dashboard</li>
-                </ol>
+                <div class="title"><h3><?=(isset($title))?$title:""?></h3></div>
+                <div><?=$this->_templates('html/toolbar')?></div>
             </section>
 
             <!-- Main content -->
