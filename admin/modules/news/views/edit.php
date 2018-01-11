@@ -48,18 +48,16 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Giới thiệu</label>
+                    <label>Nội dung</label>
                     <div class='box-body pad'>
                         <form>
-                            <textarea class="form-control" rows="4"><?php echo $rs->introtext?></textarea>
+                            <textarea class="textarea" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo $rs->introtext?></textarea>
                         </form>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label>Nội dung</label>
-                    <textarea class="form-control" rows="6"><?php echo $rs->fulltext?></textarea>
-                </div>
-                <!-- <?=vnit_editor(set_value('fulltext'),'fulltext','full')?> -->
+                <!-- <div class="form-group">
+                    <?=vnit_editor(set_value('fulltext'),'fulltext','full')?>
+                </div> -->
                 <div class="form-group">
                     <label>Hình đại diện</label>
                     <?if($rs->images == ""){?>
