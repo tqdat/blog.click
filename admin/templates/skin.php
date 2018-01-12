@@ -18,9 +18,9 @@ if($_SESSION['user_id'] == '' || $_SESSION['group_id'] < 11){
             <!-- Logo -->
             <a href="index2.html" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini">AD</span>
+                <span class="logo-mini">.*.*.</span>
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg">Administrator</span>
+                <span class="logo-lg">Hệ thống</span>
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
@@ -34,24 +34,24 @@ if($_SESSION['user_id'] == '' || $_SESSION['group_id'] < 11){
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="<?= base_url() ?>templates/dest/dist/img/user2-160x160.jpg" class="user-image" alt="User Image"/>
-                                <span class="hidden-xs">Alexander Pierce</span>
+                                <span class="hidden-xs"><?= $rs->fullname?></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
                                     <img src="<?= base_url() ?>templates/dest/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
                                     <p>
-                                        Alexander Pierce - Web Developer
-                                        <small>Member since Nov. 2012</small>
+                                        <?= $rs->fullname?>
+                                        <small><?= $rs->birthday?></small>
                                     </p>
                                 </li>
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                        <a href="<?=site_url('acinfo')?>" title="Thông tin tài khoản" id="info-acount">Profile</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                        <a href="<?=site_url('home/logout')?>" title="Thoát đăng nhập" id="logout">Sign out</a>
                                     </div>
                                 </li>
                             </ul>
