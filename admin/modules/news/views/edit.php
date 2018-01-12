@@ -48,18 +48,20 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Giới thiệu</label>
-                    <div class='box-body pad'>
+                    <label>Nội dung</label>
+                    <div class="form-group">
                         <form>
-                            <textarea class="form-control" rows="4"><?php echo $rs->introtext?></textarea>
+                            <textarea class="form-control" rows="4"> <?php echo $rs->introtext?></textarea>
                         </form>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Nội dung</label>
-                    <textarea class="form-control" rows="6"><?php echo $rs->fulltext?></textarea>
+                    <label>Nội dung chi tiết</label>
+                    <div class="form-group">
+                    <?=vnit_editor(set_value('fulltext'),'fulltext','editor1')?>
+                    </div>
                 </div>
-                <!-- <?=vnit_editor(set_value('fulltext'),'fulltext','full')?> -->
+
                 <div class="form-group">
                     <label>Hình đại diện</label>
                     <?if($rs->images == ""){?>
