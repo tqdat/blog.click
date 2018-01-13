@@ -13,9 +13,8 @@
         </div>
         <ul class="sidebar-menu">
             <li class="header">MENU </li>
-            <li class="treeview"> <a> <?=$this->uri->segment(1) ?> </a> </li>
             <li class="<? if($this->uri->segment(1) == 'setting' || $this->uri->segment(1) == 'filemanager' ||$this->uri->segment(1) == 'account' ) echo "treeview active"; else echo "treeview"; ?>" >
-                <a href="<?=site_url('')?>">
+                <a href="<?=site_url('setting/site')?>" >
                     <i class="fa fa-cogs"></i> <span>Hệ thống</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
