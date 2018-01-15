@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
 * File config_contact
-* Date: 13/01/18 02:28:36.
+* Date: 15/01/18 03:13:18.
 **/
 $config['contact_name'] = 'TRUNG TÂM DU LỊCH VÀ TRUYỀN THÔNG CLICKGO';
 $config['contact_address'] = '51 Thành Thái - Phường 14 - Quận 10 - TP. Hồ Chí Minh';

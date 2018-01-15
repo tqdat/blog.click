@@ -46,16 +46,18 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Nội dung</label>
-                    <div class='box-body pad'>
+                    <label>Giới thiệu</label>
+                    <div>
                         <form>
-                            <textarea class="textarea" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo set_value('data[introtext]')?></textarea>
+                            <textarea class="form-control" rows="4"><?php echo set_value('data[introtext]')?></textarea>
                         </form>
                     </div>
                 </div>
-                <!--  <div class="form-group">
+                <div class="form-group">
+                    <label>Nội dung chi tiết</label>
                     <?=vnit_editor(set_value('fulltext'),'fulltext','full')?>
-                </div> -->
+                    <br>
+                </div>
                 <div class="form-group">
                     <label>Hình đại diện</label>
                     <input type="checkbox" name="del" value="1"><span>Xóa Hình </span>  
