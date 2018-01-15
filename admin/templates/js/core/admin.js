@@ -97,7 +97,7 @@ function action_del()
           if(r){
               $('#admindata').submit();
           }
-        });
+      });
         return false;
     }
 }
