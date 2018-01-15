@@ -1,117 +1,119 @@
 <?php echo form_open_multipart(uri_string(), array('id'=>'admindata'));?>
 <input type="hidden" name="id" value="<?=$rs->id?>">
-<div class="col-md-8">
-    <div class="box box-warning">
-        <div class="box-body">
-            <form role="form">
-                <div class="form-group">
-                    <label>Tiêu đề</label>
-                    <input type="text" class="form-control" name="data[title]" value="<?php echo $rs->title?>"/>
-                </div>
-                <div class="form-group">
-                    <label>Link hiện tại</label>
-                    <input type="text" class="form-control" name="data[slug]" value="<?php echo $rs->slug?>"/>
-                </div>
-                <div class="form-group">
-                    <label>Chủ đề</label>
-                    <select class="form-control" id="catid" name="data[catid]">
-                        <?  foreach($listcategory as $val):
-                        $list1 = $this->news->get_all_category($val->cat_id);
-                        ?>
-                        <option value="<?php echo $val->cat_id?>" <?=($val->cat_id == set_value('data[catid]'))?'selected="selected"':''?>><?=$val->cat_name?></option>
-                        <?  foreach($list1 as $val1):
-                        $list2 = $this->news->get_all_category($val1->cat_id);
-                        ?>
-                        <option value="<?php echo $val1->cat_id?>" <?=($val1->cat_id == set_value('data[catid]'))?'selected="selected"':''?>>|____|<?=$val1->cat_name?></option>
-                        <?  foreach($list2 as $val2):?>
-                            <option value="<?php echo $val2->cat_id?>" <?=($val2->cat_id == set_value('data[catid]'))?'selected="selected"':''?>>|____|____| <?=$val2->cat_name?></option>
-                        <?  endforeach;?>
-                        <?endforeach;?>
-                        <?endforeach;?>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Nổi bật  </label>
-                    <input type="checkbox"  name="noibat" <?=($rs->noibat == 1)?'checked="checked"':''?> value="1">Có
-                </div>
-                <div class="form-group">
-                    <label>Hiển thị</label>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="data[published]" value="1" <?php echo ($rs->published == 1)?'checked="checked"':'checked="checked"';?>>Có
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="data[published]" value="0" <?php echo ($rs->published == 0)?'checked="checked"':'';?>> Không 
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Nội dung</label>
+<div class="row">
+    <div class="col-md-8">
+        <div class="box box-warning">
+            <div class="box-body">
+                <form role="form">
                     <div class="form-group">
-                        <form>
-                            <textarea class="form-control" rows="4"> <?php echo $rs->introtext?></textarea>
-                        </form>
+                        <label>Tiêu đề</label>
+                        <input type="text" class="form-control" name="data[title]" value="<?php echo $rs->title?>"/>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label>Nội dung chi tiết</label>
                     <div class="form-group">
-                    <?=vnit_editor(set_value('fulltext'),'fulltext','editor1')?>
+                        <label>Link hiện tại</label>
+                        <input type="text" class="form-control" name="data[slug]" value="<?php echo $rs->slug?>"/>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label>Chủ đề</label>
+                        <select class="form-control" id="catid" name="data[catid]">
+                            <?  foreach($listcategory as $val):
+                            $list1 = $this->news->get_all_category($val->cat_id);
+                            ?>
+                            <option value="<?php echo $val->cat_id?>" <?=($val->cat_id == set_value('data[catid]'))?'selected="selected"':''?>><?=$val->cat_name?></option>
+                            <?  foreach($list1 as $val1):
+                            $list2 = $this->news->get_all_category($val1->cat_id);
+                            ?>
+                            <option value="<?php echo $val1->cat_id?>" <?=($val1->cat_id == set_value('data[catid]'))?'selected="selected"':''?>>|____|<?=$val1->cat_name?></option>
+                            <?  foreach($list2 as $val2):?>
+                                <option value="<?php echo $val2->cat_id?>" <?=($val2->cat_id == set_value('data[catid]'))?'selected="selected"':''?>>|____|____| <?=$val2->cat_name?></option>
+                            <?  endforeach;?>
+                            <?endforeach;?>
+                            <?endforeach;?>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Nổi bật  </label>
+                        <input type="checkbox"  name="noibat" <?=($rs->noibat == 1)?'checked="checked"':''?> value="1">Có
+                    </div>
+                    <div class="form-group">
+                        <label>Hiển thị</label>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="data[published]" value="1" <?php echo ($rs->published == 1)?'checked="checked"':'checked="checked"';?>>Có
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="data[published]" value="0" <?php echo ($rs->published == 0)?'checked="checked"':'';?>> Không 
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Nội dung</label>
+                        <div class="form-group">
+                            <form>
+                                <textarea class="form-control" rows="4"> <?php echo $rs->introtext?></textarea>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Nội dung chi tiết</label>
+                        <div class="form-group">
+                            <?=vnit_editor($rs->fulltext,'fulltext','editor1')?>
+                        </div>
 
-                <div class="form-group">
-                    <label>Hình đại diện</label>
-                    <?if($rs->images == ""){?>
-                    <img src="<?=base_url()?>templates/images/img_news_no.png" alt="">
-                    <?}else{?>
-                    <img src="<?=base_url_site()?>data/news/200/<?=$rs->images?>" alt="">
-                    <?}?>
-                    <input type="checkbox" name="del" value="1"><span>Xóa Hình </span>  
-                    <input type="file" name="userfile">
-                </div>
-            </form>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Hình đại diện</label>
+                        <?if($rs->images == ""){?>
+                        <img src="<?=base_url()?>templates/images/img_news_no.png" alt="">
+                        <?}else{?>
+                        <img src="<?=base_url_site()?>data/news/200/<?=$rs->images?>" alt="">
+                        <?}?>
+                        <input type="checkbox" name="del" value="1"><span>Xóa Hình </span>  
+                        <input type="file" name="userfile">
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="col-md-4">
-    <div class="box box-warning">
-        <div class="box-header">
-            <h3 class="box-title">Thông tin Metadata</h3>
-        </div>
-        <div class="box-body">
-            <table>
-                <tr>
-                    <td class="_key" style="width: 90px;">Trạng thái</td>
-                    <td class="_value">
-                        <?=($rs->published==1)?'Đã được bật':'Đã tắt'?>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="_key">Lần xem</td>
-                    <td class="_value">
-                        <?php echo $rs->hits?>    
-                    </td>
-                </tr>
-                <tr>
-                    <td class="_key">Đã tạo</td>
-                    <td class="_value">
-                        <input type="text" value="<?php echo date('H:i:s d-m-Y',$rs->created)?>">    
-                    </td>
-                </tr>
-                <tr>
-                    <td class="_key">Đã được sửa</td>
-                    <td class="_value">
-                        <input type="text" value="<?php if($rs->modified!=0){echo date('H:i:s d-m-Y',$rs->modified);}else{echo '';}?>">    
-                    </td>
-                </tr>
-            </table>
-        </div>
+    <div class="col-md-4">
+        <div class="box box-warning">
+            <div class="box-header">
+                <h3 class="box-title">Thông tin Metadata</h3>
+            </div>
+            <div class="box-body">
+                <table>
+                    <tr>
+                        <td class="_key" style="width: 90px;">Trạng thái</td>
+                        <td class="_value">
+                            <?=($rs->published==1)?'Đã được bật':'Đã tắt'?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="_key">Lần xem</td>
+                        <td class="_value">
+                            <?php echo $rs->hits?>    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="_key">Đã tạo</td>
+                        <td class="_value">
+                            <input type="text" value="<?php echo date('H:i:s d-m-Y',$rs->created)?>">    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="_key">Đã được sửa</td>
+                        <td class="_value">
+                            <input type="text" value="<?php if($rs->modified!=0){echo date('H:i:s d-m-Y',$rs->modified);}else{echo '';}?>">    
+                        </td>
+                    </tr>
+                </table>
+            </div>
 
-        <?
+            <?
             /*function get_params($name,$params){
                 parse_str($params, $output);
                 return $output[$name];
@@ -236,30 +238,32 @@
             </div>
         </div>
     </div>
-    <?php echo form_close();?>
-    <script type="text/javascript">
-        $(".panel h3.title").click(function(){
-            div_id = $(this).attr('id');
-            content = div_id+"_content";
-            $(".panel h3").removeClass("vpanel_arrow_down");
-            $(".panel h3").addClass("vpanel_arrow");
+</div>
 
-            $(".panel_content").slideUp();
-            if($("#"+content).css('display')=='none'){
-                $("#"+content).slideDown();
-                $(this).removeClass("vpanel_arrow");
-                $(this).addClass("vpanel_arrow_down"); 
-            }else{
-                $("#"+content).slideUp();
-            }
-        });
-        $(document).ready(function() { 
-            $("#catid").change(function(){
-                catid = $(this).val();
-                $.getJSON(base_url + 'news/get_channel/?catid='+ catid, function(data){
-                    $("#channel_id").html(data.ds);
-                });
-            })
+<?php echo form_close();?>
+<script type="text/javascript">
+    $(".panel h3.title").click(function(){
+        div_id = $(this).attr('id');
+        content = div_id+"_content";
+        $(".panel h3").removeClass("vpanel_arrow_down");
+        $(".panel h3").addClass("vpanel_arrow");
+
+        $(".panel_content").slideUp();
+        if($("#"+content).css('display')=='none'){
+            $("#"+content).slideDown();
+            $(this).removeClass("vpanel_arrow");
+            $(this).addClass("vpanel_arrow_down"); 
+        }else{
+            $("#"+content).slideUp();
+        }
+    });
+    $(document).ready(function() { 
+        $("#catid").change(function(){
+            catid = $(this).val();
+            $.getJSON(base_url + 'news/get_channel/?catid='+ catid, function(data){
+                $("#channel_id").html(data.ds);
+            });
+        })
     //load_kenh(<?=$listcategory[0]->cat_id?>);
 });
 </script>

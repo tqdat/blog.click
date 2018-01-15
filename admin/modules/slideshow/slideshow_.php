@@ -25,7 +25,7 @@
         $data['title'] = "Thêm mới ảnh slideshow";
         $data['save'] = true;
         $data['apply'] = true;
-        $data['cancel'] = 'nganhang/ds';
+        $data['cancel'] = 'slideshow/ds';
         $this->form_validation->set_rules('vdata[ten]','Tên ảnh','required');
         if($this->form_validation->run() === FALSE){
             $this->pre_message = validation_errors();

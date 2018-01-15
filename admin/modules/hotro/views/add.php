@@ -35,10 +35,6 @@
                 <div class="form-group">
                     <label for="exampleInputFile">Hình ảnh</label>
                     <input type="file" name="userfile">
-                    <?if($rs->images != ''){?>
-                    <br>
-                    <img src="<?=base_url_site()?>data/support/<?=$rs->images?>" alt="">
-                    <?}?>
                 </div>
             </div><!-- /.box-body -->
         </form>

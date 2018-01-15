@@ -1,6 +1,6 @@
 <?
-echo $this->session->data['user_id'].'<br />';
-echo $this->session->data['fullname'].'<br />';
+// echo $this->session->data['user_id'].'<br />';
+// echo $this->session->data['fullname'].'<br />';
 ?>
 <?php echo form_open(uri_string(), array('id'=>'admindata'));?>
 <div class="col-md-12">
