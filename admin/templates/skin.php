@@ -77,28 +77,29 @@ if($_SESSION['user_id'] == '' || $_SESSION['group_id'] < 11){
 
             <!-- Main content -->
             <section class="content">
-                <div class="row">
-                    <?if(isset($message) && $message !=''){ echo '<div class="show_notice" id="msg">'.$message.'<button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>';}?>
-                        <?
-                        if($this->session->get_flashdata('message')){
-                            echo '<div class="alert alert-success" id="msg">'.$this->session->get_flashdata('message').'<span class="del_smg"></span></div>';
-                        }if($this->session->get_flashdata('error')){
-                            echo '<div class="alert alert-danger" id="msg">'.$this->session->get_flashdata('error').'<span class="del_smg"></span></div>';
-                        }if($this->session->get_flashdata('alert')){
-                            echo '<div class="alert alert-success" id="msg">'.$this->session->get_flashdata('alert').'<span class="del_smg"></span></div>';
-                        }
-                        ?>
-                    </div><!-- /.row -->
-                    <?=$this->view($page,$data)?>
-                </section>
-                <!-- /.Main Content -->
-            </div>
-            <!-- Content -->
-            <!-- Footer -->
-            <footer class="main-footer">
-                <div>Developed by <a target="_blank" href="http://www.pgh.vn" title="Giải pháp Ứng dụng CNTT toàn diện cho Doanh nghiệp!"><b>Phan Gia Huy Co., Ltd.</b></a> - <span style="color: red; font-weight: bold;">Support: 0905 211 588 (Mr Long)</span></div>
-            </footer>
-            <!-- Footer -->
+                <div class="hello">
+                    <?if(isset($message) && $message !=''){ echo '<div class="show_notice" id="msg">'.$message.'<span class="del_smg"></span></div>';}?>
+                    <?
+                    if($this->session->get_flashdata('message')){
+                        echo '<div class="alert alert-success" id="msg">'.$this->session->get_flashdata('message').'<span class="del_smg"></span></div>';
+                    }if($this->session->get_flashdata('error')){
+                        echo '<div class="alert alert-danger" id="msg">'.$this->session->get_flashdata('error').'<span class="del_smg"></span></div>';
+                    }if($this->session->get_flashdata('alert')){
+                        echo '<div class="alert alert-success" id="msg">'.$this->session->get_flashdata('alert').'<span class="del_smg"></span></div>';
+                    }
+                    ?>
+                </div><!-- /.row -->
+                <?=$this->view($page,$data)?>
+            </section>
+            <!-- /.Main Content -->
         </div>
-    </body>
-    </html>
+        <!-- Content -->
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div>Developed by <a target="_blank" href="http://www.pgh.vn" title="Giải pháp Ứng dụng CNTT toàn diện cho Doanh nghiệp!"><b>Phan Gia Huy Co., Ltd.</b></a> - <span style="color: red; font-weight: bold;">Support: 0905 211 588 (Mr Long)</span></div>
+        </footer>
+        <!-- Footer -->
+        <?=$this->session->unset_flashdata(array('message','error','alert'))?> 
+    </div>
+</body>
+</html>

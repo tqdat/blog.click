@@ -4,8 +4,8 @@
 
 $(document).ready(function() {
     // Del Status Msg
-    $(".del_smg").click(function(){
-        $(this).parent().slideUp();
+    $("#msg").click(function(){
+        $(this).parent().slideUp("slow");
     });
     $(".htabs a").click(function(){
         var lang_id = $(this).attr('data_key');
@@ -15,17 +15,18 @@ $(document).ready(function() {
         $("#"+lang_id).show();
     })
 });
+
 /*********
 * Action checkbox Checked - Unchecked
 */
 function setCheckboxes(the_form, id, do_check)
 {
     var elts      = (typeof(document.forms[the_form].elements[id]) != 'undefined')
-                  ? document.forms[the_form].elements[id]
-                  : 0;
+    ? document.forms[the_form].elements[id]
+    : 0;
     var elts_cnt  = (typeof(elts.length) != 'undefined')
-                  ? elts.length
-                  : 0;
+    ? elts.length
+    : 0;
 
     if (elts_cnt) {
         for (var i = 0; i < elts_cnt; i++) {
@@ -35,7 +36,7 @@ function setCheckboxes(the_form, id, do_check)
     } else {
         elts.checked        = do_check;
     }
-return true; 
+    return true; 
 }
 
 function check_chose(id, arid, the_form)
@@ -64,7 +65,7 @@ function action_save()
 {
     $('#admindata').append('<input type="hidden" name="option" value="save">');
     $('#admindata').submit();
-   return true;
+    return true;
 }
 
 // Apply
@@ -72,7 +73,7 @@ function action_apply()
 {
     $('#admindata').append('<input type="hidden" name="option" value="apply">');
     $('#admindata').submit();
-   return true;
+    return true;
 }
 
 // Status Published, Unpublished
@@ -90,14 +91,13 @@ function action_del()
     var res;
     var checked = $('input[type=checkbox]').is(':checked');
     if(!checked){
-        jAlert('Vui lòng chọn một mục để xóa','Thông báo');
+        // jAlert('Vui lòng chọn một mục để xóa','Thông báo');
+        alert('Vui lòng chọn một mục để xóa');
         return false;
-    }else{    
-        jConfirm('Bạn có chắc chắn muốn xóa  mục đã chọn.<br />Chọn <b>Đồng ý</b> hoặc <b>Không đồng ý</b>','Thông báo',function(r) {
-          if(r){
-              $('#admindata').submit();
-          }
-      });
+    }else{ 
+        if(confirm('Bạn có chắc chắn muốn xóa  mục đã chọn')){
+            $('admindata').submit();
+        }   
         return false;
     }
 }
@@ -111,12 +111,12 @@ $(function() {
             jConfirm('Bạn có chắc chắn muốn xóa mục đã chọn.<br />Chọn <b>Đồng ý</b> hoặc <b>Hủy bỏ</b>','Thông báo',function(r) {
                 if(r){
                   window.location.href = link;
-                }
-            });           
+              }
+          });           
         }
         return false;
     });
-      
+
 });
 function load_show(){
     $("#bg_load, #loading").show();
@@ -183,7 +183,7 @@ function openKCFinder(div) {
                 } else {
                    // f_w = o_w;
                    // f_h = o_h;
-                }
+               }
                 //img.style.marginLeft = parseInt((div.offsetWidth - f_w) / 2) + 'px';
                 //img.style.marginTop = parseInt((div.offsetHeight - f_h) / 2) + 'px';
                 img.style.visibility = "visible";
@@ -193,5 +193,5 @@ function openKCFinder(div) {
     window.open(base_url+'templates/ckeditor/kcfinder/browse.php?type=images&dir=images/news',
         'kcfinder_image', 'status=0, toolbar=0, location=0, menubar=0, ' +
         'directories=0, resizable=1, scrollbars=0, width=800, height=600'
-    );
+        );
 }

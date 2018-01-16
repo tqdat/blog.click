@@ -66,6 +66,7 @@
 
 <!-- AdminLTE for demo purposes -->
 <script src="<?= base_url() ?>templates/dest/dist/js/demo.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 	var base_url = '<?=base_url()?>';
 	var base_url_site = '<?=base_url_site()?>';
@@ -82,7 +83,7 @@
 		/* $("input, textarea, button").uniform();*/
 	});
 </script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	ddsmoothmenu.init({
 		arrowimages: {down: ['downarrowclass', base_url+'templates/images/m-tranfer.png', 10], right: ['rightarrowclass', base_url+'templates/menu_right.png']},
     mainmenuid: "slidemenu", //Menu DIV id
@@ -90,4 +91,4 @@
     classname: 'ddsmoothmenu', //class added to menu's outer DIV
     contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
 });
-</script>
+</script> -->
