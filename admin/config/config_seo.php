@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
 * File config_seo 
-* Date: 16/01/18 10:02:30.
+* Date: 16/01/18 10:20:59.
 **/
 $config['cf_yahoo'] = '9C986EA4B640F9929613071A35C80FCB';
 $config['cf_alexa'] = '16W05OCEYo1BLxQvM4Oz6bVwx4c';
