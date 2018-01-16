@@ -9,11 +9,11 @@ class setting extends vnit{
         $this->load->config('config_site');
         $data['title'] = "Cấu hình Website";
         $data['apply'] = true;
-       $this->form_validation->set_rules('vdata[site_name]','Tên website','required');
+        $this->form_validation->set_rules('vdata[site_name]','Tên website','required');
         $this->form_validation->set_rules('vdata[site_email]','Email hệ thống','required');
-		$this->form_validation->set_rules('vdata[site_facebook]','Facebook hệ thống','required');
-		$this->form_validation->set_rules('vdata[site_skype]','Skype hệ thống','required');
-		$this->form_validation->set_rules('vdata[site_google]','Google hệ thống','required');
+        $this->form_validation->set_rules('vdata[site_facebook]','Facebook hệ thống','required');
+        $this->form_validation->set_rules('vdata[site_skype]','Skype hệ thống','required');
+        $this->form_validation->set_rules('vdata[site_google]','Google hệ thống','required');
         $this->form_validation->set_rules('site_close','Đóng website','required');
         $this->form_validation->set_rules('vdata[site_close_msg]','Nội dung đóng website','required');
         $this->form_validation->set_rules('vdata[site_des]','Miêu tả','required');
@@ -25,9 +25,9 @@ class setting extends vnit{
             $vdata = $this->request->post['vdata'];
             $site_name = $vdata['site_name'];
             $site_email = $vdata['site_email'];
-			$site_facebook = $vdata['site_facebook'];
-			$site_skype = $vdata['site_skype'];
-			$site_google = $vdata['site_google'];
+            $site_facebook = $vdata['site_facebook'];
+            $site_skype = $vdata['site_skype'];
+            $site_google = $vdata['site_google'];
             $site_close = $this->request->post['site_close'];
             $site_message_close = $vdata['site_close_msg'];
             $site_des = $vdata['site_des'];
@@ -35,9 +35,9 @@ class setting extends vnit{
             
             $str .= "\n\$config['site_name'] = '$site_name';";  
             $str .= "\n\$config['site_email'] = '$site_email';";  
-			$str .= "\n\$config['site_facebook'] = '$site_facebook';";
-			$str .= "\n\$config['site_skype'] = '$site_skype';";
-			$str .= "\n\$config['site_google'] = '$site_google';";
+            $str .= "\n\$config['site_facebook'] = '$site_facebook';";
+            $str .= "\n\$config['site_skype'] = '$site_skype';";
+            $str .= "\n\$config['site_google'] = '$site_google';";
             $str .= "\n\$config['site_close'] = $site_close;";  
             $str .= "\n\$config['site_close_msg'] = '$site_message_close';";  
             $str .= "\n\$config['site_des'] = '$site_des';";  
@@ -47,7 +47,8 @@ class setting extends vnit{
             $this->load->helper('file');
             if(write_file(APPPATH.'config/config_site.php', $str)){
                 $this->session->set_flashdata('message','Lưu thành công');
-                redirect('setting/site') ;     
+                redirect('setting/site') ; 
+                $this->session->unset_flashdata(array('message', 'error', 'alert'));
             }else{
                 $this->pre_message =" Lưu không thành công";
             }

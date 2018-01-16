@@ -11,6 +11,8 @@ if($_SESSION['user_id'] == '' || $_SESSION['group_id'] < 11){
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <?=$this->_templates('html/meta_file')?>
     <script type="text/javascript">
     $(document).ready(function() {
