@@ -91,17 +91,17 @@ function action_del()
     var res;
     var checked = $('input[type=checkbox]').is(':checked');
     if(!checked){
-        // jAlert('Vui lòng chọn một mục để xóa','Thông báo');
-        alert('Vui lòng chọn một mục để xóa');
+        jAlert('Vui lòng chọn một mục để xóa','Thông báo');
         return false;
-    }else{ 
-        if(confirm('Bạn có chắc chắn muốn xóa  mục đã chọn')){
-            $('admindata').submit();
-        }   
+    }else{    
+        jConfirm('Bạn có chắc chắn muốn xóa  mục đã chọn.<br />Chọn <b>Đồng ý</b> hoặc <b>Không đồng ý</b>','Thông báo',function(r) {
+          if(r){
+              $('#admindata').submit();
+          }
+        });
         return false;
     }
 }
-
 // Del Item Recode
 $(function() {   
     var link = '';

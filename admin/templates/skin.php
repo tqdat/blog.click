@@ -77,7 +77,7 @@ if($_SESSION['user_id'] == '' || $_SESSION['group_id'] < 11){
 
             <!-- Main content -->
             <section class="content">
-                <div class="hello">
+                <div class="">
                     <?if(isset($message) && $message !=''){ echo '<div class="show_notice" id="msg">'.$message.'<span class="del_smg"></span></div>';}?>
                     <?
                     if($this->session->get_flashdata('message')){
