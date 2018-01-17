@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
 * File Config_site 
-* Date: 17/01/18 01:46:34.
+* Date: 17/01/18 03:19:31.
 **/
 $config['site_name'] = 'Blog Thông Tin, Cẩm Nang Du Lịch - ClickGo.vn';
 $config['site_email'] = 'info@clickgo.vn';

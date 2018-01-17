@@ -77,13 +77,13 @@ if($_SESSION['user_id'] == '' || $_SESSION['group_id'] < 11){
 
             <!-- Main content -->
             <section class="content">
-                <div class="">
+                <div class="wrapper2">
                     <?if(isset($message) && $message !=''){ echo '<div class="show_notice" id="msg">'.$message.'<span class="del_smg"></span></div>';}?>
                     <?
                     if($this->session->get_flashdata('message')){
                         echo '<div class="alert alert-success" id="msg">'.$this->session->get_flashdata('message').'<span class="del_smg"></span></div>';
                     }if($this->session->get_flashdata('error')){
-                        echo '<div class="alert alert-danger" id="msg">'.$this->session->get_flashdata('error').'<span class="del_smg"></span></div>';
+                        echo '<div class="alert alert-success" id="msg">'.$this->session->get_flashdata('error').'<span class="del_smg"></span></div>';
                     }if($this->session->get_flashdata('alert')){
                         echo '<div class="alert alert-success" id="msg">'.$this->session->get_flashdata('alert').'<span class="del_smg"></span></div>';
                     }
