@@ -8,7 +8,6 @@ var base_url_site = '<?=base_url_site()?>';
 <script type="text/javascript" src="<?php echo base_url()?>templates/js/core/alert.js" charset="UTF-8"></script>
 <script type="text/javascript" src="<?php echo base_url()?>templates/js/core/vtip.js" charset="UTF-8"></script>
 <script type="text/javascript" src="<?php echo base_url()?>templates/js/core/admin.js" charset="UTF-8"></script>
-<script type="text/javascript" src="<?php echo base_url()?>templates/js/core/jquery.validate.min.js" charset="UTF-8"></script>
 <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>templates/css/styles.css?v=2.0" media="screen" />
 <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>templates/css/uniform.default.css?v=2.0" media="screen" />
 <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>templates/css/menu.css?v=2.0" media="screen" />

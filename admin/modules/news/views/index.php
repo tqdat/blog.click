@@ -104,3 +104,4 @@ $page = '/'.$this->uri->segment(4);
         </div><!-- /.col -->
     </div>
 </div>
+<?php echo form_close()?>
