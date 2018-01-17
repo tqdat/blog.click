@@ -5,7 +5,7 @@
 $(document).ready(function() {
     // Del Status Msg
     $("#msg").click(function(){
-        $(this).parent().slideUp();
+        $(this).parent().slideUp("slow");
     });
     $(".htabs a").click(function(){
         var lang_id = $(this).attr('data_key');

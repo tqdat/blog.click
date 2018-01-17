@@ -45,13 +45,13 @@ if($_SESSION['user_id'] == '' || $_SESSION['group_id'] < 11){
                 <?=$this->_templates('html/toolbar')?>
             </div>
             <div id="wrapper">
-                <?if(isset($message) && $message !=''){ echo '<div class="show_notice" id="msg">'.$message.'<span class="del_smg"></span></div>';}?>
+                <?if(isset($message) && $message !=''){ echo '<div class="alert alert-success" id="msg">'.$message.'<span class="del_smg"></span></div>';}?>
                 <?if($this->session->get_flashdata('message')){
-                    echo '<div class="show_success" id="msg">'.$this->session->get_flashdata('message').'<span class="del_smg"></span></div>';
+                    echo '<div class="alert alert-success" id="msg">'.$this->session->get_flashdata('message').'<span class="del_smg"></span></div>';
                 }if($this->session->get_flashdata('error')){
-                    echo '<div class="show_error" id="msg">'.$this->session->get_flashdata('error').'<span class="del_smg"></span></div>';
+                    echo '<div class="alert alert-error" id="msg">'.$this->session->get_flashdata('error').'<span class="del_smg"></span></div>';
                 }if($this->session->get_flashdata('alert')){
-                    echo '<div class="show_notice" id="msg">'.$this->session->get_flashdata('alert').'<span class="del_smg"></span></div>';
+                    echo '<div class="alert alert-success" id="msg">'.$this->session->get_flashdata('alert').'<span class="del_smg"></span></div>';
                 }
                 ?>
                 <?=$this->view($page,$data)?>

@@ -66,7 +66,9 @@
 
 <!-- AdminLTE for demo purposes -->
 <script src="<?= base_url() ?>templates/dest/dist/js/demo.js" type="text/javascript"></script>
+<!-- Ajax -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
 <script type="text/javascript">
 	var base_url = '<?=base_url()?>';
 	var base_url_site = '<?=base_url_site()?>';
