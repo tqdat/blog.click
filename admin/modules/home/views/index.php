@@ -3,7 +3,7 @@
 	<? if($msg != ''){ echo $msg;}?> 
 	<?=$this->session->get_flashdata('message')?>
 </div>
-<form action="../../index2.html" method="post">
+<form action="" method="post">
 	<div class="form-group has-feedback">
 		<input type="text" class="form-control" value="<?=set_value('username')?>" name="username" placeholder="Tên đăng nhập"/>
 		<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
